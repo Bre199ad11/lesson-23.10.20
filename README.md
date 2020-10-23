@@ -7,7 +7,21 @@
 
 using namespace std;
 
+
+//(5)
+template <typename T>
+void bubblesort(T* a,int n) { //void -если функция ничего не возвращает
+	for (int i = n-1; i >0; i--) {
+		for (int j = 0; j < i; j++) {
+			if (a[j] > a[j + 1])
+				swap(a[j], a[j + 1]);
+		}
+	}
+}
+
+
 int main(){ 
+
 
 	int a[9] = {1,2,3,4,5,6,7,8,9};
 
@@ -52,9 +66,17 @@ int main(){
 
 
 	//(4)
-	string s1 = "123";
+	/*string s1 = "123";
 	auto s2 = "456"s;
 	auto x = 5;
+	cout << s1.size() << endl;*/
 
+
+	//(5)
+	double x[] = { 6,2,4,8,1,7,5,9,3 };
+	bubblesort(x, 9);
+	for (int i = 0; i < 9; i++) {
+		cout << x[i] << ' ';
+	}
 
 }	
